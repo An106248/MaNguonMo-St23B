@@ -1,0 +1,16 @@
+<form action="/new" method="POST">
+    <label for="customerName">Tên khách hàng:</label>
+    <input type="text" id="customerName" name="customerName" required>
+
+    <label for="date">Ngày:</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="time">Giờ:</label>
+    <input type="time" id="time" name="time" required>
+
+    <button type="submit">Đặt lịch</button>
+</form>
+
+<script>
+    document.getElementById("date").min = new Date().toISOString().split("T")[0];
+</script>
